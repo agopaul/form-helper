@@ -8,7 +8,8 @@ $.fn.validateForm = function(opts){
 		'onError': function(errString){ alert("Form Error: "+errString); },
 		'errorMsgs': {
 			'filled': "The field must be filled",
-			'integer': "You must prompt a valid integer"
+			'integer': "You must prompt a valid integer",
+			'email': "You must prompt a valid email"
 		}
 	};
 
@@ -21,6 +22,7 @@ $.fn.validateForm = function(opts){
 	var validations = {
 		'filled': 	/^./,
 		'integer': 	/^[\d]+$/,
+		'email': 	/^[\w_\-\.]+@[\w_\-\.]+\.[\w]{2,3}$/,
 	}
 
 	return this.each(function(){

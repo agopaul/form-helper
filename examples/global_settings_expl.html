@@ -2,13 +2,14 @@
 <head>
 	<title>Form validator Tests</title>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-	<script type="text/javascript" src="form-validator-0.1a.js"></script>
+	<script type="text/javascript" src="../form-helper.js"></script>
 </head>
 <body>
 	
 	<form id="my-fancy-form" action="?" method="GET">
-		<input type="text" name="field1" class="validate-filled">
-		<input type="text" name="field2" class="validate-integer">
+		<input type="text" name="field1" class="validate-filled"><br>
+		<input type="text" name="field2" class="validate-integer"><br>
+		<input type="text" name="field3" class="validate-email">
 
 		<input type="submit" value="Testme!">
 	</form>
