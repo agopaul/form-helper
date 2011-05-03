@@ -6,6 +6,7 @@ $.fn.validateForm = function(opts){
 
 	var settings = {
 		onError: function(errString, field){ alert("Form Error: "+errString+" value: "+field); },
+		onSubmit: function(form){},
 		errorMsgs: {
 			filled: "The field must be filled",
 			integer: "You must prompt a valid integer",
@@ -40,6 +41,7 @@ $.fn.validateForm = function(opts){
 		});
 
 		$this.bind("submit", function(e){
+			settings.onSubmit($this);
 			/// TODO :: check if the fields are disabled ??
 			$this.find("input, select, textarea").each(function(){
 				var field = $(this);
