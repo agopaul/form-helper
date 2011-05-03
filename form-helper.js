@@ -10,7 +10,8 @@ $.fn.validateForm = function(opts){
 			'filled': "The field must be filled",
 			'integer': "You must prompt a valid integer",
 			'email': "You must prompt a valid email"
-		}
+		},
+		'eachField': function(obj){}
 	};
 
 	if($.validateFormOpt)
@@ -38,6 +39,7 @@ $.fn.validateForm = function(opts){
 							settings.onError(settings.errorMsgs[v]);
 							e.preventDefault();
 						}
+						settings.eachField(field);
 					}
 				}
 			});
