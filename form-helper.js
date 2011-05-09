@@ -50,7 +50,7 @@ $.fn.validateForm = function(opts){
 		var app = {};
 
 		// Fire the callback for each field
-		$this.find("input, select, textarea").each(function(){
+		$this.find("input, select, textarea").not(":disabled").each(function(){
 			var field = $(this);
 
 			$.extend(app, validations, alternateValidations)
@@ -65,8 +65,7 @@ $.fn.validateForm = function(opts){
 
 			settings.onSubmit();
 			
-			/// TODO :: check if the fields are disabled ??
-			$this.find("input, select, textarea").each(function(){
+			$this.find("input, select, textarea").not(":disabled").each(function(){
 				var field = $(this);
 
 				for(v in app){
