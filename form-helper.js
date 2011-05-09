@@ -11,7 +11,8 @@ $.fn.validateForm = function(opts){
 			'filled': "The field must be filled",
 			'integer': "You must prompt a valid integer",
 			'email': "You must prompt a valid email",
-			'at-least-one-checked': "You should check at least one option"
+			'at-least-one-checked': "You should check at least one option",
+			'radio-checked': "Youshould check an option"
 		},
 		eachField: function(obj){}
 	};
@@ -35,6 +36,12 @@ $.fn.validateForm = function(opts){
 				return false;
 			}
 			return true;
+		},
+		'radio-checked': function(field){
+			if(field.is(':checked')){
+				return true;
+			}
+			return false;
 		}
 	}
 
