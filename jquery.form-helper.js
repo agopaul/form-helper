@@ -1,3 +1,11 @@
+/*
+ * jQuery Form Helper
+ * https://github.com/agopaul/form-helper
+ *
+ * Copyright 2011, Paolo Agostinetto
+ *
+ */
+
 $.validateFormDefaults = function(opts){
 	$.validateFormOpt = opts;
 }
