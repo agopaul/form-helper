@@ -1,3 +1,8 @@
-Form Helper
+jQuery Form Helper
 
-A simple yet powerful tool for your forms
+Handles form validation for you.
+
+Basic features:
+- Customizable callbacks (onError, onSubmit, ..)
+- Customizable error messages
+
